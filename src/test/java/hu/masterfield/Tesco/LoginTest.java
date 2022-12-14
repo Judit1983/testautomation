@@ -11,20 +11,24 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.HashMap;
 import java.util.Map;
+
 public class LoginTest {
     private WebDriver driver;
     private Map<String, Object> vars;
     JavascriptExecutor js;
+
     @Before
     public void setUp() {
         driver = new ChromeDriver();
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
     }
+
     @After
     public void tearDown() {
         driver.quit();
     }
+
     @Test
     public void login() {
         driver.get("https://bevasarlas.tesco.hu/groceries/hu-HU");
@@ -32,6 +36,6 @@ public class LoginTest {
         driver.findElement(By.id("email")).sendKeys("judit1983@gmail.com");
         driver.findElement(By.id("password")).sendKeys("Ked5venc");
         driver.findElement(By.cssSelector(".button > span")).click();
-        
+
     }
 }
