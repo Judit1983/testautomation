@@ -33,8 +33,8 @@ public class LoginTest {
     public void login() {
         driver.get("https://bevasarlas.tesco.hu/groceries/hu-HU");
         driver.findElement(By.cssSelector(".signin-register--signin-button > .button")).click();
-        driver.findElement(By.id("email")).sendKeys("email1@email.com");
-        driver.findElement(By.id("password")).sendKeys("password1");
+        driver.findElement(By.id("email")).sendKeys("email@email.hu");
+        driver.findElement(By.id("password")).sendKeys("password5");
         driver.findElement(By.cssSelector(".button > span")).click();
 
     }
